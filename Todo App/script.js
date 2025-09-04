@@ -1,5 +1,5 @@
-const inputBox=document.getElementById("input-box");
-const container=document.getElementById("listItems");
+let inputBox=document.getElementById("input-box");
+let container=document.getElementById("listItems");
 
 function buttonClick(){
   if(inputBox.value===""){
