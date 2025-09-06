@@ -1,56 +1,99 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
-body,html{
-    height: 100%;
-    width: 100%;
-    /* background: linear-gradient( rgb(98, 43, 146) ,rgb(93, 25, 139),white); */
-    /* background: url(back\ video.mp4); */
+body {
+  font-family: Arial, sans-serif;
+background:linear-gradient(135deg,rgb(134, 110, 255),rgb(8, 173, 250),rgb(165, 10, 255),hwb(315 14% 9%),rgb(179, 107, 161));
+    animation: gradientMove 10s infinite;
+    background-size: 400% 400%;
 }
-video{
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: 0;
-    object-fit:fill;
+h1,
+h2,
+h3 {
+  text-align: center;
 }
-.main {
-    height: 100%;
-    width: 100%;
+.card {
+  /* padding: 15px; */
+  /* margin: 15px 0; */
+  border-radius: 8px;
 }
-nav{
-    height: 5vw;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.101);
-    font-size: 2vw;
-    backdrop-filter: blur(10px);
-    position: fixed;
-    color: #429ded;
-    text-align: center;
-    border-bottom: 2px solid white;
-    position: fixed;
-    z-index: 10;
+button {
+  margin: 10px 5px;
+  padding: 8px 12px;
+  cursor: pointer;
 }
-nav h1{
-    text-shadow: -4px 1px rgb(83, 207, 125);
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+.correct {
+background-color: rgb(45, 255, 45); 
+ font-weight: 600;
+}
+.wrong {
+  background-color: red;
+  font-weight: 600;
+}
+.highlight {
+  font-weight: bold;
 }
 
-.container{
-    position: absolute;
-    justify-self: center;
-    margin-top: 20vh;
-    height: 65vh;
-    width: 100vh;
-    box-shadow: 0px 0px 128px 32px #fff;
-    background-color: hsla(268, 100%, 79%, 0.319);
-    border-radius: 20px;
-    z-index: 5;
+
+@keyframes gradientMove{
+    0%{background-position: 0% 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0% 50%;}
 }
-.items1{
-    height: 5vw;
-    background-color: #b787e15b;
-    width: 97%;
-    margin: 10px;
-    border-radius: 10px;
+
+/* nav */
+nav{
+    background-color: rgba(4, 255, 192, 0.497);
+    height: 10vh;
+    color: white;
+    font-size: 30px;
+    /* position: fixed; */
+}
+
+/* Add Students */
+.cardstudent{
+    height: 90vh;
+    width: 100%;
+    /* background-color: #14a64c; */
+    /* position: absolute; */
+    padding: 0.1px;
+}
+.addstu{
+    margin-top: 60px;
+    width: 50%;
+    justify-self: center;
+    background-color: #12ff3968;
+    height: 400px;
+}
+.addstu2{
+    display: flex;
+    justify-content: space-around;
+    margin: 0px 160px;
+    padding-top: 30px;
+}
+#studentName{
+    height: 40px;
+    width: 100%;
+}
+.addstubtn{
+    height: 40px;
+    width: 100px;
+    margin-top: 0px;
+}
+#studentsList{
+    padding-top: 20px;
+    margin-left: 160px;
 }
