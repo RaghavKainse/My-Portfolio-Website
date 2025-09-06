@@ -19,7 +19,7 @@ gsap.from(".box4 img" ,{
     stagger:0.5
 })
 gsap.from("#About div",{
-    x:-1500,
+    x:1500,
     delay:0.5,
     duration:2,
     stagger:0.3,
