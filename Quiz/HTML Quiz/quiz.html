@@ -1,23 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="quiz.css">
+  <meta charset="utf-8" />
+  <title>Step-by-Step Group Quiz</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" href="quiz.css">
 </head>
 <body>
-    <div class="main"><video muted autoplay loop src="back video.mp4"></video>
-    <nav>
-        <h1 class="heading">HTML Quiz</h1>
-    </nav>
-    <div class="container">
-        <div class="items1 item"></div>
-        <div class="items2 item"></div>
-        <div class="items3 item"></div>
-        <div class="items4 item"></div>
-        <div class="items5 item"></div>
+<div class="container">
+<nav>
+  <h1>Group HTML Quiz</h1>
+</nav>
+
+    <!-- Add Students -->
+   <div class="cardstudent">
+ <div class="card addstu">
+    <h3>Add Students</h3>
+    <div class="addstu2">
+    <input id="studentName" placeholder="Student Name" />
+    <button class="addstubtn" onclick="addStudent()">Add</button>
     </div>
-    </div>
+    <div id="studentsList"></div>
+    
+  </div>
+  </div>  
+
+  <!-- Quiz Area -->
+
+  <div class="card" id="quizArea" style="display:none;">
+    <h2 id="questionText"></h2>
+    <div id="questionOptions"></div>
+    <hr>
+    <div id="studentOptions"></div>
+    <button onclick="prevQuestion()" id="prevBtn">⬅ Prev</button>
+    <button onclick="nextQuestion()" id="nextBtn">Next ➡</button>
+    <button onclick="finishQuiz()" id="finishBtn" style="display:none;">Show Result ✅</button>
+    <button onclick="showAnswer()" id="answerBtn" style="background:#eee;">Show Answer 👀</button>
+  </div>
+
+ 
+
+  <!-- Leaderboard -->
+  <div class="card">
+    <h3>Leaderboard</h3>
+    <div id="leaderboard"></div>
+  </div>
+
+  </div>
+
+<script src="quiz.js"></script>
 </body>
 </html>
