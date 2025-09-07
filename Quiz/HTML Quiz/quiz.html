@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Step-by-Step Group Quiz</title>
+  <title>Group Quiz</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="stylesheet" href="quiz.css">
 </head>
@@ -15,37 +15,42 @@
     <!-- Add Students -->
    <div class="cardstudent">
  <div class="card addstu">
-    <h3>Add Students</h3>
+    <h3 class="h3">Add Students</h3>
     <div class="addstu2">
     <input id="studentName" placeholder="Student Name" />
     <button class="addstubtn" onclick="addStudent()">Add</button>
     </div>
-    <div id="studentsList"></div>
     
+    <div id="studentsList"></div>
+     <button style="align-: end;"><a href="#go">Start</a></button>
   </div>
   </div>  
 
   <!-- Quiz Area -->
-
-  <div class="card" id="quizArea" style="display:none;">
+<div class="container2" id="go">
+  <div class="card2 " id="quizArea" style="display:none;">
     <h2 id="questionText"></h2>
     <div id="questionOptions"></div>
     <hr>
     <div id="studentOptions"></div>
     <button onclick="prevQuestion()" id="prevBtn">⬅ Prev</button>
     <button onclick="nextQuestion()" id="nextBtn">Next ➡</button>
-    <button onclick="finishQuiz()" id="finishBtn" style="display:none;">Show Result ✅</button>
+    <button onclick="finishQuiz()" id="finishBtn" style="display:none;"><a href="#go2">Show Result ✅</a></button>
     <button onclick="showAnswer()" id="answerBtn" style="background:#eee;">Show Answer 👀</button>
+   
+  </div>
   </div>
 
  
 
   <!-- Leaderboard -->
-  <div class="card">
+   <div class="container3" id="go2">
+  <div class="card3  ">
     <h3>Leaderboard</h3>
     <div id="leaderboard"></div>
   </div>
 
+  </div>
   </div>
 
 <script src="quiz.js"></script>
