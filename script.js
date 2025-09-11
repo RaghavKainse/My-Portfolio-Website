@@ -28,14 +28,14 @@ gsap.from("#About div",{
 
 // project
 
-gsap.from("#projectContainer img",{
+gsap.to("#projectContainer img",{
     transform:"translateX(-250%)",
     scrollTrigger:{
         trigger:"#projectContainer",
         scroller:"body",
         // markers:true,
         start:"top 20%",
-        end:"1000%",
+        end:"800%",
         scrub:2,
         pin:true,
     }
