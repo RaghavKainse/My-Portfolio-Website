@@ -12,6 +12,29 @@ let students = []; // {id,name}
 let answers = {};  // { studentId: [answers...] }
 let currentQ = 0;
 
+// -------------------- LocalStorage Functions --------------------
+function saveData() {
+  localStorage.setItem("students", JSON.stringify(students));
+  localStorage.setItem("answers", JSON.stringify(answers));
+  localStorage.setItem("currentQ", currentQ);
+}
+
+function loadData() {
+  const s = localStorage.getItem("students");
+  const a = localStorage.getItem("answers");
+  const q = localStorage.getItem("currentQ");
+
+  if (s) students = JSON.parse(s);
+  if (a) answers = JSON.parse(a);
+  if (q) currentQ = Number(q);
+
+  if (students.length > 0) {
+    document.getElementById("quizArea").style.display="block";
+    renderStudents();
+    showQuestion();
+  }
+}
+
 // -------------------- Student Add --------------------
 function addStudent() {
   const name = document.getElementById("studentName").value.trim();
@@ -22,6 +45,7 @@ function addStudent() {
   
   document.getElementById("studentName").value = "";
   renderStudents();
+  saveData(); // ✅ save after adding student
   
   if (students.length > 0) {
     document.getElementById("quizArea").style.display="block";
@@ -66,6 +90,7 @@ function showQuestion() {
     document.getElementsByName(s.id).forEach(radio => {
       radio.addEventListener("change", e=>{
         answers[s.id][currentQ] = Number(e.target.value);
+        saveData(); // ✅ save when answer selected
       });
     });
   });
@@ -90,7 +115,6 @@ function showAnswer() {
     if (i === q.correctIndex) {
       optionDiv.classList.add("correct","highlight");
     } else {
-      // check if any student selected this wrong option
       let someoneWrong = students.some(s => answers[s.id][currentQ] === i);
       if (someoneWrong) optionDiv.classList.add("wrong","highlight");
     }
@@ -114,6 +138,7 @@ function finishQuiz() {
     results.push({name:s.name, percent, ans:answers[s.id]});
   });
   renderLeaderboard(results);
+  saveData(); // ✅ final save
 }
 
 function renderLeaderboard(results) {
@@ -142,6 +167,7 @@ function nextQuestion() {
   }
   if (currentQ < QUESTIONS.length-1) {
     currentQ++;
+    saveData(); // ✅ save question progress
     showQuestion();
   }
 }
@@ -149,9 +175,28 @@ function nextQuestion() {
 function prevQuestion() {
   if (currentQ > 0) {
     currentQ--;
+    saveData(); // ✅ save question progress
     showQuestion();
   }
 }
 
 // -------------------- Start --------------------
-showQuestion();
+loadData(); // ✅ page load pe localStorage data load karo
+
+
+function clearData() {
+  if (confirm("⚠️ Kya aap sure ho sab data clear karna hai?")) {
+    localStorage.removeItem("students");
+    localStorage.removeItem("answers");
+    localStorage.removeItem("currentQ");
+
+    students = [];
+    answers = {};
+    currentQ = 0;
+
+    document.getElementById("studentsList").innerHTML = "";
+    document.getElementById("studentOptions").innerHTML = "";
+    document.getElementById("quizArea").style.display="none";
+    document.getElementById("leaderboard").innerHTML = "";
+  }
+}
