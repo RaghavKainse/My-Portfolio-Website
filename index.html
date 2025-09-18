@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
       rel="stylesheet"
@@ -13,12 +14,13 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+
     <!-- Home page -->
 
-    <div id="Home">
-      <div class="container">
-        <div class="box1">
-          <img class="logo" src="logo1.png" alt="" />
+    <div id="Home" class="h-[110vh] w-[100%]">
+      <div class="w-[100%] h-[10%] flex justify-between item-center border-b-[2px] fixed z-20 backdrop-blur-sm bg-red-300-100">
+        <div class="h-[80px] w-[700px] align-right text-[40px] p-[10px 60px] text-white-1000 flex align-center ">
+          <img class="ml-[50px]" src="logo1.png" alt="" />
           <h4 style="font-weight: 300;">RAGHAV DEV</h4>
         </div>
         <div class="box2">
@@ -89,6 +91,7 @@
 
 
     <!-- About Page -->
+
     <div id="About">
       <div class="aboutbox1 aboutbox"><div style="width: 300px; background-color: brown; border-top-right-radius: 50px;
 border-bottom-right-radius: 50px ;">About Me</div></div>
@@ -96,8 +99,11 @@ border-bottom-right-radius: 50px ;">About Me</div></div>
     </div>
 
     <!-- Skills -->
+
 <div class="itemSkills"></div>
+
     <!-- JavaScript -->
+
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
@@ -105,6 +111,7 @@ border-bottom-right-radius: 50px ;">About Me</div></div>
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
       integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="

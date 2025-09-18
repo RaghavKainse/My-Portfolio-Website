@@ -96,3 +96,19 @@ ul li.checked::before{
     position: absolute;
     top: -5px;
 }
+
+span img{
+    height: 20px;
+    position: absolute;
+    right: 0px;
+    top: -5px;
+    height: 25px;
+    width: 25px;
+    background-color: aqua;
+}
+
+
+span img:hover{
+    background-color: #e8e8e8;
+   
+}
