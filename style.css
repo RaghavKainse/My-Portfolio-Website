@@ -43,7 +43,6 @@ body {
 }
 .box1 {
   height: 40px;
-  width: 700px;
   font-size: 27px;
   display: flex;
   align-items: center;
@@ -51,7 +50,6 @@ body {
 
 .box2 {
   height: 60px;
-  width: 600px;
   text-align: center;
   align-content: center;
   display: flex;
@@ -311,12 +309,53 @@ input {
 }
 
 /* responsive */
- #scroll-container {
-      position: fixed;
-      width: 100%;
-      top: 0; left: 0;
-      will-change: transform;
-    }
-    #spacer { /* invisible spacer to give page a scroll height */
-      height: 300vh; /* example, set based on content */
-    }
+
+
+@media (max-width:600px) {
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  .navbar{
+    display: inline;
+    height: 10vh;
+  }
+  .box2{
+    gap: 1vw;
+  }
+.box2 a{
+  padding: 0.2vh;
+  margin-top: -35px;
+  font-size: 1.8vh;
+  padding: 5px;
+}
+  .box1{
+    display: flex;
+    justify-content: center;
+    margin-left: 1vw;
+    font-size: 2vh;
+    
+  }
+#container2{
+  display: block;
+}
+  .box3{
+    height: 40%;
+    width: 100%;
+  }
+  .box3 h1{
+    font-size: 4vh;
+    padding-left: 20px;
+  }
+  .box3 h3{
+    font-size: 1.2vh;
+    padding-left: 20px;
+    margin-top: -8vh;
+  }
+  .box4{
+    height: 8vh;
+    align-self: center;
+    justify-self: center;
+  }
+ 
+}
