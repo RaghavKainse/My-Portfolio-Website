@@ -1,117 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Home page -->
 
-    <div id="Home">
-      <div class="container">
-        <div class="box1">
-          <img class="logo" src="logo1.png" alt="" />
-          <h4 style="font-weight: 300;">RAGHAV DEV</h4>
-        </div>
-        <div class="box2">
-          <a href="#Home">Home</a>
-          <a href="#Projects">Projects</a>
-          <a href="#About">About</a>
-          <a href="#Skills">Skills</a>
-          <a href="#Contact">content</a>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Home page -->
+  <div class="w-[100%] min-h-[5vh] flex justify-between items-center border-b-[2px] fixed top-0 left-0 z-20 backdrop-blur-sm bg-red-300-100">
+      <div class="box1 flex items-center gap-3 ml-[100px]">
+        <img class="h-10" src="logo1.png" alt="" />
+        <h4 style="font-weight: 300;">RAGHAV DEV</h4>
       </div>
-      <div id="container2">
-        <div class="box3">
-          <h1>"I build modern, responsive, and user-friendly web apps."</h1>
-          <h3>"Hi, I'm Raghav - A Full Stack Web Developer"</h3>
-        </div>
+      <div class="box2 flex gap-6 mr-10">
+         <a href="#Home">Home</a>
+         <a href="#About">About</a>
+         <a href="#Projects">Projects</a>
+         <a href="#Skills">Skills</a>
+         <a href="#Contact">Contact</a>
+      </div>
+  </div>
 
-        <div class="box4">
-          <img id="raghav3" class="rag" src="black1.jpg" alt="" />
-          <img id="raghav2" class="rag" src="black2.jpg" alt="" />
-          <img id="raghav1" class="rag" src="black3.jpg" alt="" />
-          <img id="raghav" class="rag" src="Raghav Image.jpg" alt="" />
-        </div>
+  <div id="main" data-scroll-container>
+    <div id="container2">
+      <div class="box3">1
+        <h1>"I build modern, responsive, and user-friendly web apps."</h1>
+        <h3>"Hi, I'm Raghav - A Full Stack Web Developer"</h3>
+      </div>
+
+      <div class="box4">
+        <img id="raghav3" class="rag" src="black1.jpg" alt="" />
+        <img id="raghav2" class="rag" src="black2.jpg" alt="" />
+        <img id="raghav1" class="rag" src="black3.jpg" alt="" />
+        <img id="raghav" class="rag" src="Raghav Image.jpg" alt="" />
       </div>
     </div>
+ 
 
-    <!-- Projects -->
 
-    <div id="Projects"></div>
-    <div id="projectContainer">
-      <div class="proheading" style="position: absolute;">MY PROJECTS</div>
-      <div class="project project1">
-        <a href="/Weather/index.html"><img src="weatherimg.png" alt="" /></a>
-      </div>
-      <div class="project project2">
-        <a href="/Todo App/index.html"
-          ><img
-            src="/Todo App/todoimg.png"
-            style="width: 100%; height: 100%"
-            alt=""
-        /></a>
-      </div>
-      <div class="project project3">
-        <a href="HTML Quiz/quiz.html"
-          ><img
-            src="/HTML Quiz/logo.png"
-            style="width: 100%; height: 100%"
-            alt=""
-        /></a>
-      </div>
-      <div class="project project4">
-        <a href="HTML Quiz/quiz.html"
-          ><img
-            src="/HTML Quiz/logo.png"
-            style="width: 100%; height: 100%"
-            alt=""
-        /></a>
-      </div>
-      <div class="project project5">
-        <a href="HTML Quiz/quiz.html"
-          ><img
-            src="/HTML Quiz/logo.png"
-            style="width: 100%; height: 100%"
-            alt=""
-        /></a>
-      </div>
+  <!-- About Page -->
+
+  <div id="About">
+    <div class="nameabout">About</div>
+    <div class="aboutbox1 aboutbox">
+      <div class="effect"></div>
+      <img src="raghavimg.jpg" alt="">
+
     </div>
 
 
-
-    <!-- About Page -->
-    <div id="About">
-      <div class="aboutbox1 aboutbox"><div style="width: 300px; background-color: brown; border-top-right-radius: 50px;
-border-bottom-right-radius: 50px ;">About Me</div></div>
-      <div class="aboutbox2 aboutbox"></div>
+    <div class="aboutbox2 aboutbox">
+      <div class="conabout">
+        <div class="conabout1"></div>
+        <div class="conabout2"></div>
+        <div class="conabout3"></div>
+        <div class="conabout4"></div>
+        <div class="conabout5"></div>
+      </div>
     </div>
+  </div>
+  <!-- Projects -->
 
-    <!-- Skills -->
-<div class="itemSkills"></div>
-    <!-- JavaScript -->
+  <div id="Projects"></div>
+  <div id="projectContainer">
+    <div class="proheading" style="position: absolute;">MY PROJECTS</div>
+    <div class="project project1">
+      <a href="/Weather/index.html"><img src="weatherimg.png" alt="" /></a>
+    </div>
+    <div class="project project2">
+      <a href="/Todo App/index.html"><img src="/Todo App/todoimg.png" style="width: 100%; height: 100%" alt="" /></a>
+    </div>
+    <div class="project project3">
+      <a href="/Quiz/index.html"><img src="" style="width: 100%; height: 100%" alt="" /></a>
+    </div>
+    <div class="project project4">
+      <a href=""><img src="" style="width: 100%; height: 100%" alt="" /></a>
+    </div>
+    <div class="project project5">
+      <a href=""><img src="" style="width: 100%; height: 100%" alt="" /></a>
+    </div>
+  </div>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
-      integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
-      integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
 
-    <script src="script.js"></script>
-  </body>
+
+  <!-- Skills -->
+
+  <div id="Skills" class="itemSkills">
+    <div class="skilbox1">Skills</div>
+    <div class="skilbox2">
+      <div class="iconss">
+        <img src="/Icons/HTML5.png" alt="">
+        <div class="">HTML5</div>
+      </div>
+      <div class="iconss">
+        <img src="/Icons/CSS3.png" alt="">
+        <div class="">CSS3</div>
+      </div>
+      <div class="iconss">
+        <img src="/Icons/JavaScript.png" alt="">
+        <div class="">JavaScript</div>
+      </div>
+      <div class="iconss">
+        <img src="/Icons/Python.png" alt="">
+        <div class="">Python</div>
+      </div>
+      <div class="iconss">
+        <img src="/Icons/Bootstrap.png" alt="">
+        <div class="">Bootstrap</div>
+      </div>
+    </div>
+    <div class="skilbox3">
+      <div class="skilbox3">
+        <div class="iconss">
+          <img src="/Icons/GitHub.png" alt="">
+          <div class="">Git Hub</div>
+        </div>
+        <div class="iconss">
+          <img src="/Icons/MySQL.png" alt="">
+          <div class="">My SQL</div>
+        </div>
+        <div class="iconss">
+          <img src="/Icons/React.png" alt="">
+          <div class="">React</div>
+        </div>
+        <div class="iconss">
+          <img src="/Icons/MongoDB.png" alt="">
+          <div class="">MongoDB</div>
+        </div>
+        <div class="iconss">
+          <img src="/Icons/Node.js.png" alt="">
+          <div class="">Node Js</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Contact Page -->
+  <div id="Contact">
+    <div class="con1">
+      <div class="cnn">Contact</div>
+      <div class="con2">
+        <div>
+          Name
+          <input type="text">
+        </div>
+        <div>
+          Email
+          <input type="email">
+        </div>
+        <div>
+          Massage
+          <input type="text" class="h-10">
+        </div>
+        <button class="submit">Submit</button>
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  
+
+  <!-- JavaScript -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+    integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+    integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
