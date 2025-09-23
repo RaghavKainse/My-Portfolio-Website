@@ -84,20 +84,20 @@ document.addEventListener("DOMContentLoaded", function () {
     scrollTrigger: {
       trigger: "#About",
       scroller: "#main",
-      start: "top 80%",
-      end: "bottom 50%",
+      start: "top 100%",
+      end: "bottom 90%",
       scrub: 1,
     },
   });
 
   // Projects Section
   gsap.to("#projectContainer img", {
-    transform: "translateX(-205%)",
+    transform: "translateX(-200%)",
     scrollTrigger: {
       trigger: "#projectContainer",
       scroller: "#main",
       start: "top 20%",
-      end: "800%",
+      end: "100%",
       scrub: 2,
       opacity: 0.5,
       pin: true,
