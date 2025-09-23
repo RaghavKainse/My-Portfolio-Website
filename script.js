@@ -84,8 +84,8 @@ document.addEventListener("DOMContentLoaded", function () {
     scrollTrigger: {
       trigger: "#About",
       scroller: "#main",
-      start: "top 80%",
-      end: "bottom 50%",
+      start: "top 100%",
+      end: "bottom 90%",
       scrub: 1,
     },
   });

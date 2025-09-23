@@ -88,7 +88,6 @@ body {
 }
 .box4 {
   width: 50%;
-  margin-top: 90px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -353,9 +352,29 @@ input {
     margin-top: -8vh;
   }
   .box4{
-    height: 8vh;
+    height: 40vh;
     align-self: center;
     justify-self: center;
   }
- 
+
+ /* About page */
+  #About{
+    display: block;
+    justify-content: center;
+    height: 100vh;
+    padding: 0px;
+  }
+  .aboutbox1{
+    width: 100%;
+    height: 30vh;
+  }
+  .nameabout{
+    /* position: absolute; */
+    font-size: 5vh;
+    margin-top: 2vh;
+  }
+.aboutbox2{
+  width: 100%;
+  height: 40vh;
+}
 }
