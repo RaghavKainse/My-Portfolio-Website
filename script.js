@@ -92,12 +92,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Projects Section
   gsap.to("#projectContainer img", {
-    transform: "translateX(-205%)",
+    transform: "translateX(-200%)",
     scrollTrigger: {
       trigger: "#projectContainer",
       scroller: "#main",
       start: "top 20%",
-      end: "800%",
+      end: "100%",
       scrub: 2,
       opacity: 0.5,
       pin: true,
