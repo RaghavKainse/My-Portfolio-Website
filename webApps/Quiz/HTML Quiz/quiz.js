@@ -7,6 +7,7 @@ const QUESTIONS = [
   { q: "JavaScript is used for?", options: ["Styling","Server only","Client interactivity","Database"], correctIndex: 2 }
 ];
 
+
 // -------------------- Data --------------------
 let students = []; // {id,name}
 let answers = {};  // { studentId: [answers...] }

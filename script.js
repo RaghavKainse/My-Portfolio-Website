@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   gsap.registerPlugin(ScrollTrigger);
 
-  // ILocomotive Scroll
   const scroll = new LocomotiveScroll({
     el: document.querySelector("#main"),
     smooth: true,
@@ -10,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
     tablet: { smooth: true },
   });
 
-  // ✅ Page load pe scroll top fix
   let firstLoad = true;
   scroll.on("scroll", () => {
     if (firstLoad) {
@@ -20,11 +18,10 @@ document.addEventListener("DOMContentLoaded", function () {
     ScrollTrigger.update();
   });
 
-  // ✅ Navbar links ke liye smooth scroll
   document.querySelectorAll(".box2 a").forEach((link) => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
-      const target = this.getAttribute("href"); // e.g. #Home, #About
+      const target = this.getAttribute("href");
       scroll.scrollTo(target === "#Home" ? 0 : target, {
         offset: 0,
         duration: 800,
@@ -33,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // ✅ ScrollTrigger + Locomotive integration
   ScrollTrigger.scrollerProxy("#main", {
     scrollTop(value) {
       return arguments.length
@@ -48,9 +44,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("load", () => ScrollTrigger.refresh());
 
-  /* ----------------------
-     GSAP Animations
-     ---------------------- */
   var t1 = gsap.timeline();
   t1.from(".box2 a", {
     y: -100,
@@ -74,7 +67,6 @@ document.addEventListener("DOMContentLoaded", function () {
     stagger: 0.5,
   });
 
-  // About Section
   gsap.from(".effect,.aboutbox1 img", {
     x: -600,
     delay: 0.5,
@@ -90,9 +82,8 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
-  // Projects Section
   gsap.to("#projectContainer img", {
-    transform: "translateX(-200%)",
+    transform: "translateX(-160%)",
     scrollTrigger: {
       trigger: "#projectContainer",
       scroller: "#main",
@@ -104,7 +95,6 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
-  // Skills Section
   gsap.from(".skilbox2 .iconss", {
     x: -800,
     delay: 0.9,

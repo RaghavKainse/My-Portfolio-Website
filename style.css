@@ -12,12 +12,12 @@ body {
   max-height: 100%;
   scroll-behavior: smooth;
   background: linear-gradient(135deg,
-      rgb(70, 0, 223),
-      rgb(65, 44, 255),
+      rgb(223, 171, 0),
+      rgb(26, 175, 64),
       rgb(56, 49, 255),
-      hwb(276 6% 0%),
+      hwb(4 6% 0%),
       rgb(228, 69, 253),
-      rgb(46, 46, 255));
+      rgb(0, 210, 225));
   animation: gradientMove 10s infinite;
   background-size: 400% 400%;
   overflow-x: hidden;
@@ -184,10 +184,17 @@ body {
       blue);
   backdrop-filter: blur(10px);
 }
-
+.item{
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.162);
+  border: 2px solid white;
+}
 .aboutbox2 {
   right: 20px;
   height: 90vh;
+  font-size: 20px;
   display: flex;
   justify-content: center;
 }
@@ -195,7 +202,7 @@ body {
 .conabout {
   height: 400px;
   width: 90%;
-  top: 80px;
+  top: 60px;
   position: absolute;
   /* background-color: aquamarine; */
 }
@@ -410,7 +417,9 @@ input {
     height: 33vh;
     width: 33vh;
   }
-
+.item{
+  font-size: 10px;
+}
   .nameabout {
     /* position: absolute; */
     font-size: 4vh;
@@ -427,6 +436,7 @@ input {
     top: -10vh;
     position: absolute;
   }
+
 
   /* Projects */
   .proheading {
