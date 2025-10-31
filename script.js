@@ -82,18 +82,39 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
+
+function makeAnim(percent) {
+
+  ScrollTrigger.getAll().forEach(st => {
+    if (st.trigger && st.trigger.id === "projectContainer") st.kill();
+  });
   gsap.to("#projectContainer img", {
-    transform: "translateX(-160%)",
+    xPercent: percent,
+    ease: "none",
     scrollTrigger: {
       trigger: "#projectContainer",
       scroller: "#main",
       start: "top 20%",
       end: "100%",
       scrub: 2,
-      opacity: 0.5,
       pin: true,
     },
   });
+}
+
+// initial create
+if (window.matchMedia("(max-width: 600px)").matches) {
+  makeAnim(-350);
+} else {
+  makeAnim(-160);
+}
+
+// listen to changes (when user resizes)
+window.matchMedia("(max-width: 600px)").addEventListener("change", e => {
+  if (e.matches) makeAnim(-250);
+  else makeAnim(-160);
+});
+
 
   gsap.from(".skilbox2 .iconss", {
     x: -800,
