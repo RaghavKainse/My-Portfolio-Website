@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const scroll = new LocomotiveScroll({
     el: document.querySelector("#main"),
     smooth: true,
-    multiplier: 0.8,
+    multiplier: 3,
     smartphone: { smooth: true },
     tablet: { smooth: true },
   });
