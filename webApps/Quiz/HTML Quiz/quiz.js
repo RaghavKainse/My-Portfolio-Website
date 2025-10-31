@@ -1,19 +1,9 @@
 // -------------------- Quiz Questions --------------------
-const QUESTIONS = [
-  { q: "Capital of India?", options: ["Mumbai","Delhi","Kolkata","Chennai"], correctIndex: 1 },
-  { q: "2 + 2 * 2 = ?", options: ["6","8","4","2"], correctIndex: 0 },
-  { q: "HTML stands for?", options: ["HyperText Markup Language","Home Tool","HighText","Hyperlink Text"], correctIndex: 0 },
-  { q: "Which tag makes a paragraph?", options: ["<p>","<div>","<span>","<h1>"], correctIndex: 0 },
-  { q: "JavaScript is used for?", options: ["Styling","Server only","Client interactivity","Database"], correctIndex: 2 }
-];
 
-
-// -------------------- Data --------------------
-let students = []; // {id,name}
-let answers = {};  // { studentId: [answers...] }
+let students = [];
+let answers = {};
 let currentQ = 0;
 
-// -------------------- LocalStorage Functions --------------------
 function saveData() {
   localStorage.setItem("students", JSON.stringify(students));
   localStorage.setItem("answers", JSON.stringify(answers));
@@ -36,7 +26,6 @@ function loadData() {
   }
 }
 
-// -------------------- Student Add --------------------
 function addStudent() {
   const name = document.getElementById("studentName").value.trim();
   if (!name) return alert("Enter student name!");
@@ -46,7 +35,7 @@ function addStudent() {
   
   document.getElementById("studentName").value = "";
   renderStudents();
-  saveData(); // ✅ save after adding student
+  saveData();
   
   if (students.length > 0) {
     document.getElementById("quizArea").style.display="block";
@@ -59,13 +48,13 @@ function renderStudents() {
     students.map(s => `👤 ${s.name}`).join("<br>");
 }
 
-// -------------------- Quiz Navigation --------------------
+
 function showQuestion() {
   const q = QUESTIONS[currentQ];
   
   // Question text
   document.getElementById("questionText").innerHTML = 
-    `<b>Q${currentQ+1}:</b> ${q.q}`;
+    `<b >Q${currentQ+1}:</b> ${q.q}`;
   
   // Question options (visible once for all)
   let qHtml = "";
@@ -77,7 +66,7 @@ function showQuestion() {
   // Students answer area (only ABCD radios)
   let html = "";
   students.forEach(s => {
-    html += `<div><b>${s.name}:</b> `;
+    html += `<div class="bbdiv"><div class="bb">${s.name}:</div> `;
     ["A","B","C","D"].forEach((label, oi) => {
       const checked = answers[s.id][currentQ]===oi ? "checked" : "";
       html += `<label><input type="radio" name="${s.id}" value="${oi}" ${checked}> ${label}</label>`;
@@ -125,7 +114,7 @@ function showAnswer() {
 // -------------------- Finish Quiz --------------------
 function finishQuiz() {
   if (!allAnsweredForCurrent()) {
-    alert("⚠️ Sabhi students last question ka answer select karein!");
+    alert("Sabhi students last question ka answer select karein!");
     return;
   }
 
@@ -144,14 +133,14 @@ function finishQuiz() {
 
 function renderLeaderboard(results) {
   results.sort((a,b)=>b.percent-a.percent);
-  let html = `<table><tr><th>Rank</th><th>Name</th><th>Score</th><th>Answers</th></tr>`;
+  let html = `<table class="table"><tr><th>Rank</th><th>Name</th><th>Score</th><th>Answers</th></tr>`;
   results.forEach((r,i)=>{
     let ansHtml = r.ans.map((a,idx)=>{
       if (a===null) return `<span class="wrong">-</span>`;
       if (a===QUESTIONS[idx].correctIndex) return `<span class="correct">${String.fromCharCode(65+a)}</span>`;
       return `<span class="wrong">${String.fromCharCode(65+a)}</span>`;
-    }).join(" | ");
-    html += `<tr><td>${i+1}</td><td>${r.name}</td><td>${r.percent}%</td><td>${ansHtml}</td></tr>`;
+    }).join("  ");
+    html += `<tr><td class="tdd">${i+1}</td><td class="tdd">${r.name}</td><td class="tdd">${r.percent}%</td><td class="tdd">${ansHtml}</td></tr>`;
   });
   html += `</table>`;
   document.getElementById("leaderboard").innerHTML = html;
@@ -163,7 +152,7 @@ function allAnsweredForCurrent() {
 
 function nextQuestion() {
   if (!allAnsweredForCurrent()) {
-    alert("⚠️ Sabhi students apna answer select karein!");
+    alert("Sabhi students apna answer select karein!");
     return;
   }
   if (currentQ < QUESTIONS.length-1) {
@@ -186,7 +175,7 @@ loadData(); // ✅ page load pe localStorage data load karo
 
 
 function clearData() {
-  if (confirm("⚠️ Kya aap sure ho sab data clear karna hai?")) {
+  if (confirm(" Kya aap sure ho sab data clear karna hai?")) {
     localStorage.removeItem("students");
     localStorage.removeItem("answers");
     localStorage.removeItem("currentQ");
