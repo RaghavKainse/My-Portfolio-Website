@@ -104,7 +104,7 @@ function makeAnim(percent) {
 
 // initial create
 if (window.matchMedia("(max-width: 600px)").matches) {
-  makeAnim(-350);
+  makeAnim(-400);
 } else {
   makeAnim(-160);
 }
