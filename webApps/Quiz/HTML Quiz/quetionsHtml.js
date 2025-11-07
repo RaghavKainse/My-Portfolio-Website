@@ -1,22 +1,67 @@
 const QUESTIONS = [
-  { q: "What does HTML stand for?", options: ["HyperText Markup Language", "HighText Machine Language", "Hyper Tabular Markup Language", "None of these"], correctIndex: 0 },
-  { q: "Which is the largest heading tag in HTML?", options: ["&lt;h6&gt;", "&lt;h1&gt;", "&lt;heading&gt;", "&lt;head&gt;"], correctIndex: 1 },
-  { q: "Which tag is used to define a paragraph?", options: ["&lt;para&gt;", "&lt;p&gt;", "&lt;pg&gt;", "&lt;paragraph&gt;"], correctIndex: 1 },
-  { q: "What does the &lt;br&gt; tag do?", options: ["Breaks line", "Makes text bold", "Inserts space", "Adds link"], correctIndex: 0 },
-  { q: "Which tag is used to create a hyperlink?", options: ["&lt;a&gt;", "&lt;link&gt;", "&lt;href&gt;", "&lt;url&gt;"], correctIndex: 0 },
-  { q: "Which attribute is used to specify the image source?", options: ["src", "href", "alt", "link"], correctIndex: 0 },
-  { q: "Which HTML tag is used to display an image?", options: ["&lt;image&gt;", "&lt;pic&gt;", "&lt;img&gt;", "&lt;src&gt;"], correctIndex: 2 },
-  { q: "What is the root element of an HTML document?", options: ["&lt;head&gt;", "&lt;html&gt;", "&lt;body&gt;", "&lt;title&gt;"], correctIndex: 1 },
-  { q: "Which tag defines metadata about an HTML document?", options: ["&lt;meta&gt;", "&lt;data&gt;", "&lt;info&gt;", "&lt;head&gt;"], correctIndex: 0 },
-  { q: "Where is the &lt;title&gt; tag placed?", options: ["Inside &lt;body&gt;", "Outside &lt;html&gt;", "Inside &lt;head&gt;", "Anywhere"], correctIndex: 2 },
-  { q: "Which HTML tag creates an ordered list?", options: ["&lt;ul&gt;", "&lt;ol&gt;", "&lt;li&gt;", "&lt;list&gt;"], correctIndex: 1 },
-  { q: "Which HTML tag creates an unordered list?", options: ["&lt;ol&gt;", "&lt;ul&gt;", "&lt;li&gt;", "&lt;dl&gt;"], correctIndex: 1 },
-  { q: "Which tag is used to create a table in HTML?", options: ["&lt;table&gt;", "&lt;tab&gt;", "&lt;tbl&gt;", "&lt;t&gt;"], correctIndex: 0 },
-  { q: "Which tag is used to define a table row?", options: ["&lt;tr&gt;", "&lt;td&gt;", "&lt;row&gt;", "&lt;th&gt;"], correctIndex: 0 },
-  { q: "Which tag defines a table cell?", options: ["&lt;cell&gt;", "&lt;tr&gt;", "&lt;td&gt;", "&lt;tcell&gt;"], correctIndex: 2 },
-  { q: "How do you write a comment in HTML?", options: ["// comment", "/* comment */", "&lt;!-- comment --&gt;", "# comment"], correctIndex: 2 },
-  { q: "Which tag is used to create an input field?", options: ["&lt;textbox&gt;", "&lt;input&gt;", "&lt;field&gt;", "&lt;form&gt;"], correctIndex: 1 },
-  { q: "Which HTML element represents a form submission button?", options: ["&lt;button&gt;", "&lt;submit&gt;", "&lt;input type='submit'&gt;", "&lt;form&gt;"], correctIndex: 2 },
-  { q: "Which attribute specifies where to open the linked document?", options: ["href", "alt", "target", "src"], correctIndex: 2 },
-  { q: "What is the latest version of HTML called?", options: ["HTML5", "HTMLv5", "H5", "Advanced HTML"], correctIndex: 0 }
+  {
+    q: "What is the unit of electric current?",
+    options: ["Volt", "Ampere", "Ohm", "Watt"],
+    correctIndex: 1
+  },
+  {
+    q: "Which device is used to store electric charge?",
+    options: ["Resistor", "Capacitor", "Inductor", "Transistor"],
+    correctIndex: 1
+  },
+  {
+    q: "Ohm’s Law defines the relationship between which quantities?",
+    options: [
+      "Voltage, Current, and Resistance",
+      "Power, Current, and Energy",
+      "Voltage, Power, and Charge",
+      "Current, Resistance, and Frequency"
+    ],
+    correctIndex: 0
+  },
+  {
+    q: "What is the SI unit of resistance?",
+    options: ["Ampere", "Coulomb", "Ohm", "Volt"],
+    correctIndex: 2
+  },
+  {
+    q: "Which material is commonly used as a semiconductor?",
+    options: ["Copper", "Silicon", "Iron", "Aluminium"],
+    correctIndex: 1
+  },
+  {
+    q: "Which component allows current to flow only in one direction?",
+    options: ["Resistor", "Diode", "Capacitor", "Inductor"],
+    correctIndex: 1
+  },
+  {
+    q: "What type of current changes direction periodically?",
+    options: ["Direct Current", "Alternating Current", "Static Current", "None of these"],
+    correctIndex: 1
+  },
+  {
+    q: "What is the main function of a transformer?",
+    options: [
+      "To convert DC to AC",
+      "To increase or decrease voltage",
+      "To store electrical energy",
+      "To produce magnetic field"
+    ],
+    correctIndex: 1
+  },
+  {
+    q: "What is the symbol of resistance in circuit diagrams?",
+    options: ["R", "C", "L", "V"],
+    correctIndex: 0
+  },
+  {
+    q: "Which law states that the sum of currents entering a junction equals the sum leaving it?",
+    options: [
+      "Ohm’s Law",
+      "Kirchhoff’s Current Law",
+      "Faraday’s Law",
+      "Coulomb’s Law"
+    ],
+    correctIndex: 1
+  }
 ];

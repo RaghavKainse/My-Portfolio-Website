@@ -111,7 +111,7 @@ if (window.matchMedia("(max-width: 600px)").matches) {
 
 // listen to changes (when user resizes)
 window.matchMedia("(max-width: 600px)").addEventListener("change", e => {
-  if (e.matches) makeAnim(-250);
+  if (e.matches) makeAnim(-340);
   else makeAnim(-160);
 });
 
