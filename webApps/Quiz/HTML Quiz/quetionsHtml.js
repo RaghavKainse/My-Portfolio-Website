@@ -1,117 +1,98 @@
 const QUESTIONS = [
   // HTML (7 Questions)
   {
-    q: "What does HTML stand for?",
-    options: [
-      "Hyper Text Markup Language",
-      "High Transfer Machine Language",
-      "Hyperlink Text Making Language",
-      "Home Tool Markup Language"
-    ],
+    q: "Which tag is used to create a dropdown list in HTML?",
+    options: ["<select>", "<dropdown>", "<option>", "<list>"],
     correctIndex: 0
   },
   {
-    q: "Which tag is used to create a hyperlink in HTML?",
-    options: ["<a>", "<link>", "<href>", "<url>"],
+    q: "Which tag is used to insert a line break?",
+    options: ["<br>", "<lb>", "<break>", "<hr>"],
     correctIndex: 0
   },
   {
-    q: "Which tag is used to insert an image in HTML?",
-    options: ["<image>", "<img>", "<pic>", "<src>"],
-    correctIndex: 1
-  },
-  {
-    q: "Which attribute is used to provide alternate text for an image?",
-    options: ["title", "alt", "src", "text"],
-    correctIndex: 1
-  },
-  {
-    q: "Which HTML tag is used to define a table row?",
-    options: ["<td>", "<tr>", "<th>", "<row>"],
-    correctIndex: 1
-  },
-  {
-    q: "Which tag is used to define the largest heading in HTML?",
-    options: ["<h6>", "<head>", "<h1>", "<title>"],
+    q: "Which HTML element is used to play video files?",
+    options: ["<media>", "<movie>", "<video>", "<play>"],
     correctIndex: 2
   },
   {
-    q: "Which tag is used to create an ordered list?",
-    options: ["<ul>", "<ol>", "<li>", "<list>"],
+    q: "Which attribute is used to open a link in a new tab?",
+    options: ["new", "target='_blank'", "tab='new'", "open='true'"],
+    correctIndex: 1
+  },
+  {
+    q: "Which tag is used to define emphasized text?",
+    options: ["<strong>", "<em>", "<bold>", "<italic>"],
+    correctIndex: 1
+  },
+  {
+    q: "Which tag represents the footer of a webpage?",
+    options: ["<bottom>", "<footer>", "<end>", "<section>"],
+    correctIndex: 1
+  },
+  {
+    q: "Which tag is used to group block-level elements?",
+    options: ["<span>", "<div>", "<group>", "<block>"],
     correctIndex: 1
   },
 
   // CSS (7 Questions)
   {
-    q: "What does CSS stand for?",
-    options: [
-      "Creative Style Sheets",
-      "Computer Style System",
-      "Cascading Style Sheets",
-      "Colorful Style Syntax"
-    ],
-    correctIndex: 2
-  },
-  {
-    q: "Which property is used to change the text color in CSS?",
-    options: ["text-color", "font-color", "color", "foreground"],
-    correctIndex: 2
-  },
-  {
-    q: "Which CSS property controls the size of text?",
-    options: ["font-size", "text-style", "size", "font-weight"],
+    q: "Which CSS property is used for making text bold?",
+    options: ["font-weight", "bold", "text-bold", "font-style"],
     correctIndex: 0
   },
   {
-    q: "Which CSS property is used to change the background color?",
-    options: ["background-color", "color-bg", "bg", "background-style"],
+    q: "Which property controls the spacing between letters?",
+    options: ["letter-spacing", "word-spacing", "text-space", "gap"],
     correctIndex: 0
   },
   {
-    q: "Which value of position makes an element fixed on the screen?",
-    options: ["relative", "absolute", "sticky", "fixed"],
-    correctIndex: 3
+    q: "Which CSS property is used to make corners rounded?",
+    options: ["border-radius", "border-curve", "round-corner", "radius"],
+    correctIndex: 0
   },
   {
-    q: "Which unit is relative to the root font size?",
-    options: ["px", "em", "rem", "%"],
+    q: "Which CSS display value makes elements appear in a column?",
+    options: ["flex-row", "block", "flex-column", "inline"],
     correctIndex: 2
   },
   {
-    q: "Which property is used to create space inside an element?",
-    options: ["margin", "spacing", "padding", "border"],
+    q: "Which selector selects all elements inside a specific element?",
+    options: ["*", ">", "space ( )", "+"],
+    correctIndex: 2
+  },
+  {
+    q: "Which CSS feature is used to create animations?",
+    options: ["@keyframes", "@animation", "timing()", "motion"],
+    correctIndex: 0
+  },
+  {
+    q: "Which CSS property is used to hide an element but keep its space?",
+    options: ["display:none", "opacity:0", "visibility:hidden", "hidden:true"],
     correctIndex: 2
   },
 
   // JavaScript (6 Questions)
   {
-    q: "Which keyword is used to declare a block-scoped variable?",
-    options: ["var", "let", "const", "both let and const"],
-    correctIndex: 3
-  },
-  {
-    q: "Which method is used to print something in the browser console?",
-    options: ["log()", "console()", "console.log()", "print()"],
-    correctIndex: 2
-  },
-  {
-    q: "Which symbol is used for strict equality comparison?",
-    options: ["==", "===", "!=", "="],
-    correctIndex: 2
-  },
-  {
-    q: "What is the output type of document.querySelector()?",
-    options: ["Array", "NodeList", "Single Element", "Object of Elements"],
-    correctIndex: 2
-  },
-  {
-    q: "Which function is used to convert a string to an integer?",
-    options: ["parseInt()", "int()", "Number()", "convert()"],
+    q: "Which method removes the last element of an array?",
+    options: ["pop()", "shift()", "push()", "remove()"],
     correctIndex: 0
   },
   {
-    q: "Which of the following is NOT a JavaScript data type?",
-    options: ["string", "boolean", "character", "object"],
+    q: "Which keyword is used to define a constant variable?",
+    options: ["var", "let", "const", "static"],
     correctIndex: 2
-  }
-];
+  },
+  {
+    q: "What will typeof [] return?",
+    options: ["array", "object", "list", "undefined"],
+    correctIndex: 1
+  },
+  {
+    q: "Which function is used to delay code execution?",
+    options: ["setInterval()", "setTimeout()", "wait()", "pause()"],
+    correctIndex: 1
+  },
+  {
+    q: "Which operator is used to merge two ar
