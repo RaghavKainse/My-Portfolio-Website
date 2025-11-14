@@ -1,72 +1,18 @@
-<<<<<<< HEAD
-const JS_OUTPUT_QUESTIONS = [
-  {
-    q: "console.log(typeof null);",
-    options: ["'null'", "'object'", "'undefined'", "'number'"],
-    correctIndex: 1
-  },
-  {
-    q: "console.log(1 + '2' + 3);",
-    options: ["6", "'123'", "NaN", "'15'"],
-    correctIndex: 1
-  },
-  {
-    q: "console.log(+'5' + 5);",
-    options: ["'55'", "10", "NaN", "5"],
-    correctIndex: 1
-  },
-  {
-    q: "let x; console.log(x);",
-    options: ["null", "'undefined'", "Error", "0"],
-    correctIndex: 1
-  },
-  {
-    q: "console.log([1,2,3] == [1,2,3]);",
-    options: ["true", "false", "undefined", "Error"],
-    correctIndex: 1
-  },
-  {
-    q: "console.log('5' - 2);",
-    options: ["3", "'52'", "NaN", "undefined"],
-    correctIndex: 0
-  },
-  {
-    q: "console.log(true + false);",
-    options: ["1", "0", "true", "NaN"],
-    correctIndex: 0
-  },
-  {
-    q: "console.log([] == 0);",
-    options: ["true", "false", "NaN", "Error"],
-    correctIndex: 0
-  },
-  {
-    q: "console.log(('b' + 'a' + + 'a' + 'a').toLowerCase());",
-    options: ["'baNaNa'", "'banana'", "'baaa'", "'error'"],
-    correctIndex: 1
-  },
-  {
-    q: "console.log(typeof NaN);",
-    options: ["'NaN'", "'undefined'", "'number'", "'object'"],
-    correctIndex: 2
-  }
-];
-=======
 const QUESTIONS = [
   // HTML (7 Questions)
   {
     q: "Which tag is used to create a dropdown list in HTML?",
-    options: ["<select>", "<dropdown>", "<option>", "<list>"],
+    options: ["&lt;select&gt;", "&lt;dropdown&gt;", "&lt;option&gt;", "&lt;list&gt;"],
     correctIndex: 0
   },
   {
     q: "Which tag is used to insert a line break?",
-    options: ["<br>", "<lb>", "<break>", "<hr>"],
+    options: ["&lt;br&gt;", "&lt;lb&gt;", "&lt;break&gt;", "&lt;hr&gt;"],
     correctIndex: 0
   },
   {
     q: "Which HTML element is used to play video files?",
-    options: ["<media>", "<movie>", "<video>", "<play>"],
+    options: ["&lt;media&gt;", "&lt;movie&gt;", "&lt;video&gt;", "&lt;play&gt;"],
     correctIndex: 2
   },
   {
@@ -76,17 +22,17 @@ const QUESTIONS = [
   },
   {
     q: "Which tag is used to define emphasized text?",
-    options: ["<strong>", "<em>", "<bold>", "<italic>"],
+    options: ["&lt;strong&gt;", "&lt;em&gt;", "&lt;bold&gt;", "&lt;italic&gt;"],
     correctIndex: 1
   },
   {
     q: "Which tag represents the footer of a webpage?",
-    options: ["<bottom>", "<footer>", "<end>", "<section>"],
+    options: ["&lt;bottom&gt;", "&lt;footer&gt;", "&lt;end&gt;", "&lt;section&gt;"],
     correctIndex: 1
   },
   {
     q: "Which tag is used to group block-level elements?",
-    options: ["<span>", "<div>", "<group>", "<block>"],
+    options: ["&lt;span&gt;", "&lt;div&gt;", "&lt;group&gt;", "&lt;block&gt;"],
     correctIndex: 1
   },
 
@@ -147,7 +93,5 @@ const QUESTIONS = [
     q: "Which function is used to delay code execution?",
     options: ["setInterval()", "setTimeout()", "wait()", "pause()"],
     correctIndex: 1
-  },
-  {
-    q: "Which operator is used to merge two ar
->>>>>>> 8a10d115e04533a3bfcc59a769991c8545ee3470
+  }
+];
