@@ -11,7 +11,10 @@ const DURATION = 60;
 
 function loadParagraph() {
   const p = PARAGRAPHS[Math.floor(Math.random() * PARAGRAPHS.length)];
+<<<<<<< HEAD
    console.log(p)
+=======
+>>>>>>> 8a10d115e04533a3bfcc59a769991c8545ee3470
   textBox.innerHTML = "";
   for (const ch of p) {
     const s = document.createElement("span");
