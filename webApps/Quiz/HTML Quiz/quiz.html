@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Group Quiz</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+<div class="container">
+<nav>
+  <h1>Group Quiz</h1>
+</nav>  
+
+    <!-- Add Students -->
+   <div class="cardstudent">
+ <div class="card addstu">
+    <h3 class="h3">Add Students</h3>
+   
+  
+    <div class="addstu2">
+    <input id="studentName" placeholder="Student Name" />
+    <button class="addstubtn" onclick="addStudent()">Add</button>
+    </div>
+    
+    <div id="studentsList" >
+    </div>
+    <div class="stu" style="  gap: 30px; display: flex; justify-content: center;">
+       <button style="height: 40px; outline: none; border: none; font-size: 20px; width: 80px; border-radius: 50px; background-color: rgb(255, 72, 0); color: white;"><a href="#go" style="color: white; text-decoration: none; border: none;">Start</a></button>
+        <button onclick="clearData()" style="height: 40px; outline: none; border: none; cursor: pointer; font-size: 20px; width: 140px; border-radius: 50px; background-color: rgb(255, 72, 0); color: white;">Clear All Data</button>
+
+     </div>
+  </div>
+  </div>  
+
+  <!-- Quiz Area -->
+<div class="container2" id="go">
+  <div class="card2 " id="quizArea" style="display:none;">
+    <h2 id="questionText"></h2>
+    <div id="questionOptions"></div>
+    <hr>
+    <div id="studentOptions"></div>
+    <div class="bttons">
+    <button onclick="prevQuestion()" id="prevBtn" class="bttn">⬅ Prev</button>
+    <button onclick="showAnswer()" id="answerBtn" class="bttn" style="background:hsl(17, 100%, 50%);">Show Answer</button>
+    <button onclick="nextQuestion()" id="nextBtn" class="bttn">Next ➡</button>
+    <button onclick="finishQuiz()" id="finishBtn" class="bttn" ><a style="text-decoration: none; color: white;" href="#go2">Show Result </a></button>
+</div>
+  </div>
+  </div>
+
+ 
+
+  <!-- Leaderboard -->
+   <div class="container3" id="go2">
+  <div class="card3  ">
+    <h3>Result</h3>
+    <div id="leaderboard"></div>
+  </div>
+
+  </div>
+  </div>
+
+<script src="quetionsHtml.js"></script>
+<script src="quiz.js"></script>
+</body>
+</html>

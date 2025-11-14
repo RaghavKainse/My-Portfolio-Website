@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <!-- Navbar -->
+    <nav>
+      <div class="logo">Smile Typing Racer</div>
+      <div class="logo1">
+        <a href="#" class="link1">Login</a>
+        <a href="#" class="link2">Sign up free</a>
+      </div>
+    </nav>
+
+    <!-- Main -->
+    <main>
+      <div class="item1 item">
+        <h3>Typing Speed Test</h3>
+        <h1>Test Your Typing Skills</h1>
+      </div>
+      
+      <div class="item2 item">
+        <div class="typing-area">
+          <div class="text-box" id="textBox"></div>
+          <div class="caret" aria-hidden="true"></div>
+          <input
+            type="text"
+            class="box"
+            id="inputBox"
+            autocomplete="off"
+            autocapitalize="off"
+            spellcheck="false"
+          />
+        </div>
+      </div>
+
+      <div class="item3 item">
+        <div class="info1 info"><span id="timer">60</span></div>
+        <div class="info2 info"><span id="wpm">0 WPM</span></div>
+        <div class="info3 info">Acc <span id="accuracy">100%</span></div>
+      </div>
+    </main>
+<script src="words.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

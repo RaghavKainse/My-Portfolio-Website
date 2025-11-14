@@ -1,0 +1,223 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, rgb(134, 110, 255), rgb(8, 173, 250), rgb(165, 10, 255), hwb(315 14% 9%), rgb(179, 107, 161));
+  animation: gradientMove 10s infinite;
+  background-size: 400% 400%;
+  width: 100vw;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.correct {
+  border: 4px solid rgb(6, 169, 0);
+  padding: 3px;
+  background-color: white;
+  color: rgb(5, 164, 0);
+  border-radius: 2px;
+}
+
+.wrong {
+  border: 4px solid rgb(255, 0, 0);
+  padding: 3px;
+  background-color: white;
+  color: red;
+  border-radius: 3px;
+}
+
+.highlight {
+  font-weight: bold;
+}
+
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* nav */
+nav {
+  color: white;
+  height: 10vh;
+  width: 100%;
+  z-index: 20;
+  font-size: 25px;
+  position: fixed;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.041);
+  border-bottom: white 2px solid;
+}
+body::selection{
+  background-color: rgb(255, 89, 0);
+}
+
+/* Add Students */
+.cardstudent {
+  height: 90vh;
+  width: 100%;
+  margin-top: 10vh;
+  /* background-color: #14a64c; */
+  /* position: absolute; */
+  padding: 0.1px;
+}
+
+.addstu {
+  margin-top: 60px;
+  width: 50%;
+  justify-self: center;
+  background-color: #ffffff29;
+  backdrop-filter: blur(10px);
+  height: 400px;
+}
+
+.addstu2 {
+  display: flex;
+  justify-content: space-around;
+  margin: 0px 100px;
+  padding-top: 0px;
+  align-items: center;
+  background-color: #ffffff;
+  height: 50px;
+  border-radius: 30px;
+}
+
+#studentName {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding-left: 20px;
+  border-radius: 30px;
+}
+
+h3 {
+  font-size: 30px;
+  padding: 20px;
+  color: white;
+}
+
+.addstubtn {
+  height: 100%;
+  border: none;
+  width: 120px;
+  border-radius: 30px;
+  background-color: orangered;
+  cursor: pointer;
+}
+
+#studentsList {
+  padding: 20px;
+  margin-left: 100px;
+  overflow: auto;
+  height: 220px;
+  width: 500px;
+  font-size: 20px;
+  color: white;
+}
+
+.container2 {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container3 {
+  height: 100vh;
+  padding-top: 10vh;
+  width: 100%;
+}
+#leaderboard{
+  padding: 20px;
+ 
+}
+.tdd{
+  text-align: center;
+  padding: 10px;
+}
+tbody tr th{
+  padding: 10px;
+  text-align: center;
+}
+
+
+#questionOptions {
+  font-size: 25px;
+  margin: 15px;
+}
+
+.card2 {
+  /* margin-left: 300px;   */
+  width: 50%;
+  padding: 30px;
+  min-height: 500px;
+  background-color: #ffffff29;
+}
+
+.bb {
+  width: 250px;
+}
+
+.bbdiv {
+  display: flex;
+  justify-content: space-between;
+}
+
+#studentOptions {
+  height: 300px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 25px;
+}
+.bttons button{
+  height: 40px;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  width: 120px;
+  cursor: pointer;
+  border-radius: 50px;
+  background-color: rgb(255, 72, 0);
+  color: white;
+}
+.bttons{
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
